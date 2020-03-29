@@ -17,10 +17,14 @@ async def on_member_join(member):
 	await member.add_roles(role)
 
 @client.command()
-async def info():
+async def info(ctx):
 	channel = discord.utils.get(member.guild.channels, id=int("693829907548995614"))
-	await channel.send(f"Привет {member}! Коротко о сервере: Сервер Evrey's Plays для совместных игр и общения участников клуба Еврии битчес")
-	
+	await ctx.channel.send(f"Привет {member}! Коротко о сервере: Сервер Evrey's Plays для совместных игр и общения участников клуба Еврии битчес")
+
+
+# @client.command()
+# async def time
+
 @client.event
 async def on_member_remove(member):
 	channel = discord.utils.get(member.guild.channels, id=int("693815346502565898"))
