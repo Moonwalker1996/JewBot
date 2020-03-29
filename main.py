@@ -17,8 +17,8 @@ async def on_member_join(member):
 	await member.add_roles(role)
 
 @client.command()
-async def info(ctx, member):
-	await ctx.send(f"Привет {member}! Коротко о сервере: Сервер Evrey's Plays для совместных игр и общения участников клуба Еврии битчес")
+async def info(ctx):
+	await ctx.send(f"Привет! Коротко о сервере: Сервер Evrey's Plays для совместных игр и общения участников клуба Еврии битчес")
 
 
 # @client.command()
