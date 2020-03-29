@@ -17,7 +17,7 @@ async def on_member_join(member):
 	await member.add_roles(role)
 
 @client.command()
-async def info(ctx):
+async def info(ctx, member):
 	channel = discord.utils.get(member.guild.channels, id=int("693829907548995614"))
 	await ctx.channel.send(f"Привет {member}! Коротко о сервере: Сервер Evrey's Plays для совместных игр и общения участников клуба Еврии битчес")
 
