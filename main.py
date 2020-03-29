@@ -18,7 +18,7 @@ async def on_member_join(member):
 
 @client.command()
 async def info(ctx):
-	await ctx.send(f"Привет! Коротко о сервере: Сервер Evrey's Plays для совместных игр и общения участников клуба Еврии битчес")
+	await ctx.send("Привет! Коротко о сервере: Сервер Evrey's Plays для совместных игр и общения участников клуба Еврии битчес")
 
 
 # @client.command()
