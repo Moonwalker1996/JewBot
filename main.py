@@ -21,8 +21,8 @@ async def info(ctx):
 	await ctx.send("Привет! Коротко о сервере: Сервер Evrey's Plays для совместных игр и общения участников клуба Еврии битчес")
 
 @client.command(pass_context = True)
-async def kick(ctx, userName: discord.User):
-    await client.kick(userName)
+async def kick(ctx, member : discord.Member, *, name):
+    await member.kick(name)
 
 @client.event
 async def on_member_remove(member):
