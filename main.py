@@ -20,8 +20,7 @@ async def info(ctx):
 # орел/решка
 @client.command()
 async def coin(ctx, args):
-	coin_vars = ['орел','решка']
-	if args == random.choice(coin_vars):
+	if args == random.choice(coin_vars := ['орел','решка']):
 		await ctx.send('Да! Правильный ответ: ' + args)
 	elif args not in coin_vars:
 		await ctx.send('Напиши нориальный вариант')
