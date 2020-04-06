@@ -20,15 +20,11 @@ async def info(ctx):
 # орел/решка
 @client.command()
 async def coin(ctx, args):
-	coin_vars = ['Орёл','Решка','Подкинь ещё раз']
-	coin_v_2 = ['Орёл','Решка']
-	r_coin = random.choice(coin_vars)
-	if r_coin == 'Подкинь ещё раз':
-		await ctx.send(r_coin)
-	elif args == r_coin:
-		await ctx.send('Да!Правильный ответ' + args)
-	elif args != r_coin:
-		await ctx.send('Ты выбрал:' + args + "А правильный ответ:" + random.choice(coin_v_2))
+	coin_vars = ['орёл','решка']
+	if args == random.choice(coin_vars):
+		await ctx.send('Да! Правильный ответ: ' + args)
+	else:
+		await ctx.send('Неа...Подкинь еще раз')
 
 # да/нет игра
 @client.command()
