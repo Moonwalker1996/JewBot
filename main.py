@@ -8,7 +8,8 @@ from discord.ext import commands
 client = commands.Bot(command_prefix = '!')
 
 # команда для очистки чата
-async def clear(ctx, num = 5):
+@client.command()
+async def cl(ctx, num = 5):
 	await ctx.channel.purge(limit = num)
 
 # ИНФОРМАЦИЯ
@@ -16,13 +17,18 @@ async def clear(ctx, num = 5):
 async def info(ctx):
 	await ctx.send("Привет! Коротко о сервере: Сервер Evrey's Plays для совместных игр и общения участников клуба Еврии битчес")
 
-methods = {
-	'clearing' : clear
-}
-
+# орел/решка
 @client.command()
-async def cl(ctx, num = 5):
-	methods['clearing']()
+async def coin(ctx, args):
+	coin_vars = ['Орёл','Решка','Подкинь ещё раз']
+	coin_v_2 = ['Орёл','Решка']
+	r_coin = random.choice(coin_vars)
+	if r_coin == 'Подкинь ещё раз':
+		await ctx.send(r_coin)
+	elif args == r_coin:
+		await ctx.send('Да!Правильный ответ' + args)
+	elif args != r_coin:
+		await ctx.send('Ты выбрал:' + args + "А правильный ответ:" + random.choice(coin_v_2))
 
 # да/нет игра
 @client.command()
