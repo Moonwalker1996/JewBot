@@ -20,7 +20,7 @@ methods = {
 	'clearing' : clear
 }
 
-@client.commamd()
+@client.command()
 async def cl():
 	methods['clearing']()
 
