@@ -23,6 +23,8 @@ async def coin(ctx, args):
 	coin_vars = ['орел','решка']
 	if args == random.choice(coin_vars):
 		await ctx.send('Да! Правильный ответ: ' + args)
+	elif args not in coin_vars:
+		await ctx.send('Напиши нориальный вариант')
 	else:
 		await ctx.send('Неа...Подкинь еще раз')
 
@@ -30,7 +32,7 @@ async def coin(ctx, args):
 @client.command()
 async def ask(ctx, *, args):
 	answers = ['Да','Возможно','Нет','Вероятнее всего','Может быть','Определённо нет','Определённо да', 'Не знаю','Интересный вопрос,но отвечать я на него не буду','Не уверен','Дай минуту подумать']
-	await ctx.send('Твой вопрос:' + args + '\nОтвет:' + random.choice(answers))
+	await ctx.send('Твой вопрос: ' + args + '\nОтвет:' + random.choice(answers))
 
 # выход персонажа
 @client.event
