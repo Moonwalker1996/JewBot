@@ -21,7 +21,7 @@ methods = {
 }
 
 @client.command()
-async def cl():
+async def cl(ctx, num = 5):
 	methods['clearing']()
 
 # да/нет игра
