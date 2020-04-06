@@ -22,7 +22,7 @@ methods = {
 
 @client.commamd()
 async def cl():
-	methods.['clearing']()
+	methods['clearing']()
 
 # да/нет игра
 @client.command()
