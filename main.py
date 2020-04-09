@@ -80,7 +80,7 @@ async def cl(ctx, n = 3):
 @client.command()
 async def rnb(ctx, args, rangei):
 	if (bot_c := random.choice(range(0, (rangeint := int(rangei))))) == (arg := int(args)):
-		await ctx.send('Я знаю!Твое число: ' + args + 'Это было проще простого')
+		await ctx.send('Я знаю!Твое число: ' + args + '\nЭто было проще простого')
 	elif arg > rangeint:
 		await ctx.send('Ты жульничаешь')
 	else:
