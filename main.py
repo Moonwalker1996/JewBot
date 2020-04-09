@@ -57,11 +57,11 @@ async def w(ctx):
 @client.command()
 async def rn(ctx, args, rangei):
 	if (arg := int(args)) == (num := random.choice(range(0, (rangeint := int(rangei))))):
-		await ctx.send('Везунчик!Я выбрал: ' + str(num) + " ,как и ты")
+		await ctx.send('Везунчик!Я выбрал: ' + str(n) + " ,как и ты")
 	elif arg > rangeint:
 		await ctx.send('Число: ' + args + ',больше чем: ' + str(rangeint))
 	else:
-		await ctx.send('Лузер....Я загадал: ' + str(num))
+		await ctx.send('Лузер....Я загадал: ' + str(n))
 
 # creator info
 @client.command()
@@ -84,7 +84,7 @@ async def rnb(ctx, args, rangei):
 	elif arg > rangeint:
 		await ctx.send('Ты жульничаешь')
 	else:
-		await ctx.send('Я снова не угадал...')
+		await ctx.send('Мой ответ был: ' + str(bot_c) + 'Я снова не угадал...')
 
 # RUN
 token = os.environ.get('BOT_TOKEN')
