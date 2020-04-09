@@ -23,7 +23,7 @@ async def on_member_remove(member):
 # coin game
 @client.command()
 async def c(ctx, arg):
-	if arg == random.choice(var := ['орел', 'решка']):
+	if args == random.choice(var := ['орел', 'решка']):
 		await ctx.send('Да! Тебе попалась сторона: ' + args)
 	elif args not in var:
 		await ctx.send('Выбери орел или решка')
@@ -57,11 +57,11 @@ async def w(ctx):
 @client.command()
 async def rn(ctx, args, rangei):
 	if (arg := int(args)) == (num := random.choice(range(0, (rangeint := int(rangei))))):
-		await ctx.send(dictionary.random_n_win)
+		await ctx.send('Везунчик!Я выбрал: ' + str(n) + " ,как и ты")
 	elif arg > rangeint:
-		await ctx.send(dictionary.random_n_exc)
+		await ctx.send('Число: ' + args + ',больше чем: ' + str(rangeint))
 	else:
-		await ctx.send(dictionary.random_n_lose)
+		await ctx.send('Лузер....Я загадал: ' + str(n))
 
 # creator info
 @client.command()
@@ -80,11 +80,11 @@ async def cl(ctx, n = 3):
 @client.command()
 async def rnb(ctx, args, rangei):
 	if (bot_c := random.choice(range(0, (rangeint := int(rangei))))) == (arg := int(args)):
-		await ctx.send(dictionary.bot_win)
+		await ctx.send('Я знаю!Твое число: ' + args + 'Это было проще простого')
 	elif arg > rangeint:
-		await ctx.send(dictionary.bot_g_exc)
+		await ctx.send('Ты жульничаешь')
 	else:
-		await ctx.send(dictionary.bot_lose)
+		await ctx.send('Я снова не угадал...')
 
 # RUN
 token = os.environ.get('BOT_TOKEN')
