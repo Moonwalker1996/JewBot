@@ -86,12 +86,6 @@ async def rnb(ctx, args, rangei):
 	else:
 		await ctx.send(dictionary.bot_lose)
 
-@client.command()
-async def adm(ctx, mem):
-	role = discord.utils.get(member.guild.roles, id = int('693810507093901313'))
-	member = mem
-	await member.add_roles(role)
-
 # RUN
 token = os.environ.get('BOT_TOKEN')
 client.run(str(token))
