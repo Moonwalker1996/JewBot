@@ -23,7 +23,7 @@ async def on_member_remove(member):
 # coin game
 @client.command()
 async def c(ctx, arg):
-	if args == random.choice(var := ['орел', 'решка']):
+	if arg == random.choice(var := ['орел', 'решка']):
 		await ctx.send('Да! Тебе попалась сторона: ' + args)
 	elif args not in var:
 		await ctx.send('Выбери орел или решка')
