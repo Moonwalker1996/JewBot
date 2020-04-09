@@ -57,11 +57,11 @@ async def w(ctx):
 @client.command()
 async def rn(ctx, args, rangei):
 	if (arg := int(args)) == (num := random.choice(range(0, (rangeint := int(rangei))))):
-		await ctx.send('Везунчик!Я выбрал: ' + str(n) + " ,как и ты")
+		await ctx.send('Везунчик!Я выбрал: ' + str(num) + " ,как и ты")
 	elif arg > rangeint:
 		await ctx.send('Число: ' + args + ',больше чем: ' + str(rangeint))
 	else:
-		await ctx.send('Лузер....Я загадал: ' + str(n))
+		await ctx.send('Лузер....Я загадал: ' + str(num))
 
 # creator info
 @client.command()
