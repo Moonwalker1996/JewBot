@@ -36,7 +36,7 @@ async def a(ctx, *, args):
 	if (exception := len(list(args))) < 3:
 		await ctx.send('Отличный вопрос,а теперь задай нормальный')
 	else:
-		await ctx.send("Твой вопрос был: " + args + "Ответ: " + random.choice(dictionary.answers))
+		await ctx.send("Твой вопрос был: " + args + "\nОтвет: " + random.choice(dictionary.answers))
 
 # helping
 @client.command()
