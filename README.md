@@ -1,1 +1,1 @@
-# EveryBot
+# JewBot
