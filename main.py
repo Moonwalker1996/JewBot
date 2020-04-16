@@ -76,6 +76,11 @@ async def cl(ctx, n = 3):
     else:
         await ctx.channel.purge(limit = n)
 
+# members info
+@client.command()
+async def mi(ctx):
+	await ctx.send("Всего: " + str(len(ctx.guild.members)) + "Онлайн: " + str(len(discord.Status.online)))
+
 # random num bot choosing
 @client.command()
 async def rnb(ctx, args, rangei):
