@@ -79,7 +79,7 @@ async def cl(ctx, n = 3):
 # members info
 @client.command()
 async def mi(ctx):
-	await ctx.send("Всего: " + str(len(ctx.guild.members)) + "Онлайн: " + str(len(discord.Status.online)))
+	await ctx.send("Всего: " + str(len(ctx.guild.members)) + "\nОнлайн: " + str(len(discord.Status.online)))
 
 # random num bot choosing
 @client.command()
