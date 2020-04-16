@@ -82,7 +82,7 @@ async def rnb(ctx, args, rangei):
 	if (bot_c := random.choice(range(0, (rangeint := int(rangei))))) == (arg := int(args)):
 		await ctx.send('Я знаю!Твое число: ' + args + '\nЭто было проще простого')
 	elif arg > rangeint:
-		await ctx.send('Число' + args + 'больше, чем' + str(rangeit) + '. Меня - еврея, не обманешь")
+		await ctx.send('Число' + args + 'больше, чем' + str(rangeit) + '. Меня - еврея, не обманешь')
 	else:
 		await ctx.send('Мой ответ был: ' + str(bot_c) + '\nЯ снова не угадал...')
 
